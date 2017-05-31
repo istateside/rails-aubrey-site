@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+%html
+  %head
+    %title Aubrey Nolan
+    = csrf_meta_tags
+
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  %body
+    -if notice or alert
+      #flash
+        %p.notice= notice
+        %p.alert= alert
+    - if signed_in?
+      #admin-header
+        %span= "Logged in as #{current_admin.email}"
+        = link_to 'Sign Out', destroy_admin_session_path, class: 'sign-out-link', method: :delete
+    %header
+      .top
+        %h1
+          = link_to 'Aubrey Nolan', root_url
+          = link_to root_url do
+            = image_tag 'lady-head-small'
+      %nav
+        = link_to 'Work', root_url
+        = link_to 'About', about_url
+
+    = yield
