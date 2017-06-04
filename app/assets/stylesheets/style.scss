@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:300,400');
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 10px;
   font-family: "Oswald", sans-serif;
@@ -11,7 +15,11 @@ body {
   margin: 0;
 }
 
-header img {
+header h1 {
+  margin-top: 0;
+}
+
+.app header img {
   position: absolute;
   top: 2rem;
   left: 50%;
@@ -140,7 +148,6 @@ nav a:hover {
 }
 
 .carousel {
-
   margin-top: 3rem;
 }
 
@@ -152,6 +159,18 @@ nav a:hover {
 
 .flickity-prev-next-button {
   background: hsla(0, 0%, 100%, 0.5);
+}
+
+input[type='submit'] {
+  cursor: pointer;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='number'] {
+  display: block;
+  width: 100%;
 }
 
 #admin-header {
@@ -174,6 +193,37 @@ nav a:hover {
 
     &:hover {
       background: red;
+    }
+  }
+}
+
+.admin {
+  header {
+    a,
+    img {
+      display: block;
+    }
+
+    img {
+      margin: 0 auto;
+    }
+  }
+ 
+  .field {
+    margin-bottom: 1rem;
+  }
+
+  main {
+    > h2,
+    > form, 
+    > a {
+      display: block;
+      margin: auto;
+      width: 300px;
+    }
+
+    form {
+      margin: 2rem auto;
     }
   }
 }

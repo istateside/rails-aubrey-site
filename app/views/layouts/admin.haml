@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 %html
   %head
-    %title Aubrey Nolan
+    %title Admin | Aubrey Nolan
     = csrf_meta_tags
 
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
-  %body.app{ class: "#{params[:controller]}-#{params[:action]}".gsub('/', '-').parameterize }
+  %body.admin{ class: "#{params[:controller]}-#{params[:action]}".gsub('/', '-').parameterize }
     -if notice or alert
       #flash
         %p.notice= notice
@@ -19,12 +19,7 @@
     %header
       .top
         %h1
-          = link_to 'Aubrey Nolan', root_url
           = link_to root_url do
             = image_tag 'lady-head-small'
-      %nav
-        = link_to 'Work', root_url
-        = link_to 'About', about_url
-
     %main
       = yield
