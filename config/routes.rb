@@ -6,11 +6,13 @@ Rails.application.routes.draw do
   get 'about', to: "pages#about"
   get 'work/:permalink', to: 'pages#work'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  namespace :admin do
-    resources :pages
-  end
 
   devise_scope :admin do
+    get 'admin/*all', to: 'admin#home'
     get 'admin/sign_in', to: 'devise/sessions#new'
+  end
+
+  namespace :api do
+    resource :pages, :projects, except: [:new, :edit]
   end
 end
