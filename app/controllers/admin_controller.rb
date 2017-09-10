@@ -3,5 +3,6 @@ class AdminController < ApplicationController
   layout 'admin'
 
   def home
+    render html: '', layout: true
   end
 end
