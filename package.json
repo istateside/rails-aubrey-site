@@ -1,5 +1,18 @@
 {
-  "name": "aubrey-site-rails",
-  "private": true,
-  "dependencies": {}
+  "name": "something",
+  "dependencies": {
+    "@rails/webpacker": "^3.0.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify": "^14.0.0",
+    "browserify-incremental": "^3.1.0",
+    "jquery": "^3.2.1"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.7.1"
+  }
 }

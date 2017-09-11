@@ -5,7 +5,12 @@ class PagesController < ApplicationController
   def about
   end
   
-  def work
-    render plain: params[:permalink].inspect
+  def comics
+  end
+
+  def illustration
+  end
+
+  def other
   end
 end

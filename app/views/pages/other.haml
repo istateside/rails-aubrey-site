@@ -1,0 +1,32 @@
+%section.other
+  .work-grid
+    %ul
+      %li.project.js-overlay-trigger{ data: { overlay_index: 1 } }
+        .overlay
+          %p Panels to the People
+        = image_tag 'aubrey-assets/other/P2tp.jpg'
+
+#overlays
+  .overlay.js-overlay{ data: { overlay_index: 1 } }
+    = link_to "×", '#', class: 'js-overlay-close close-trigger'
+    .slide-show-wrapper.js-slide-show
+      .slide
+        .width-50
+          = image_tag 'aubrey-assets/other/P2tp.jpg'
+        .width-50
+          %p
+            Monthly, themed readings of comics by established and up-and-coming comics creators. Formerly at Babycastles Gallery, now at WORD Bookstore.
+            Co-hosted with cartoonist Jeremy Nguyen.
+
+          %p
+            Information on current themes and upcoming readings
+            = link_to 'here', 'https://www.facebook.com/panelstothepeople', target: '_blank'
+
+  .overlay.js-overlay{ data: { overlay_index: 2 } }
+    = link_to "×", '#', class: 'js-overlay-close close-trigger'
+    .slide-show-wrapper.js-slide-show
+      .slide.js-slide
+        .width-50
+          = image_tag 'aubrey-assets/comics/Comics_Greenpointers_1.jpg'
+        .width-50
+          = image_tag 'aubrey-assets/comics/Comics_Greenpointers_2.jpg'

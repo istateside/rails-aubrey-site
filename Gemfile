@@ -16,6 +16,10 @@ gem 'devise', :github => "plataformatec/devise", :branch => "master"
 gem 'haml-rails', '~> 0.9'
 gem 'paperclip', '~> 5.0.0'
 gem 'acts_as_list'
+gem 'rack-cors'
+gem 'simple_token_authentication', '~> 1.5' # see semver.org
+
+gem 'webpacker', '~> 3.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
