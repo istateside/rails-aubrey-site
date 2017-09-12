@@ -32,13 +32,46 @@
 }
 
 nav {
-  a {
+  > * {
     display: inline-block;
     font-size: 2rem;
+    vertical-align: top;
 
     &:not(:first-child) {
       margin-left: 1.5rem;
     }
+  }
+}
+
+.dropdown-trigger {
+  position: relative;
+
+  .dropdown {
+    opacity: 0;
+    transition: opacity .3s, max-height .3s;
+    background: rgba(0,0,0,.9);
+    max-height: 0;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    font-size: 1.3rem;
+    padding: 1rem;
+    width: 9rem;
+    overflow: hidden;
+    z-index: 10;
+
+    li:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      display: block;
+    }
+  }
+
+  &:hover .dropdown {
+    opacity: 1;
+    max-height: 150px;
   }
 }
 
