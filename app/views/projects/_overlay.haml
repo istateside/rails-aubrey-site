@@ -1,1 +1,6 @@
-= @project.id
+.overlay.js-overlay{ data: { overlay_index: idx } }
+  = link_to "×", '#', class: 'js-overlay-close close-trigger'
+  .slide-show-wrapper.js-slide-show
+    = link_to '<', '#', class: 'js-slick-left nav-arrow nav-arrow_left'
+    = link_to '>', '#', class: 'js-slick-right nav-arrow nav-arrow_right'
+    = yield

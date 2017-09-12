@@ -6,7 +6,8 @@
     "babelify": "^7.3.0",
     "browserify": "^14.0.0",
     "browserify-incremental": "^3.1.0",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "slick-carousel": "^1.7.1"
   },
   "license": "MIT",
   "engines": {

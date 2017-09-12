@@ -6,7 +6,6 @@
 
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.7.1/slick/slick.css"/>
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'application'
 
   %body.app{ class: "#{params[:controller]}-#{params[:action]}".gsub('/', '-').parameterize }
     -if notice or alert
@@ -21,7 +20,7 @@
       .top
         %h1
           = link_to 'Aubrey Nolan', root_url
-          = link_to root_url do
+          = link_to root_url, class: 'logo' do
             = image_tag 'lady-head-small'
       %nav
         = link_to 'Work', root_url
@@ -30,4 +29,4 @@
     %main
       = yield
 
-    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.7.1/slick/slick.min.js"></script>
+    = javascript_pack_tag 'application'
