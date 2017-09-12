@@ -10,6 +10,7 @@ export default class OverlayHandler {
       infinite: false,
       variableWidth: true,
       slidesToShow: 2,
+      focusOnSelect: true,
       prevArrow: '.js-slick-left',
       nextArrow: '.js-slick-right',
       slide: '.js-slide'
@@ -51,6 +52,12 @@ export default class OverlayHandler {
 
   showOverlay(overlay) {
     overlay.classList.add('-is-visible'); 
+    const slider = overlay.querySelector('.js-slide-show');
+
+    if (slider) {
+      $(slider).slick('slickGoTo', 0);
+      $(slider).find('.slick-slide:eq(0)').focus();
+    }
   }
 
   hideOverlaysExcept($overlay) {
@@ -61,6 +68,3 @@ export default class OverlayHandler {
     overlay.classList.remove('-is-visible');
   }
 }
-
-window.Overlay = new OverlayHandler();
-

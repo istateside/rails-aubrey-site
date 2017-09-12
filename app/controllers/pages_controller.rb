@@ -13,20 +13,4 @@ class PagesController < ApplicationController
 
   def other
   end
-
-  private
-  def other_projects
-    [
-      {
-        name: 'Greenpointers',
-        slides: [
-          {} 
-        ]
-      },
-      {
-        name: 'What Type of Girl?',
-
-      }
-    ]
-  end
 end
