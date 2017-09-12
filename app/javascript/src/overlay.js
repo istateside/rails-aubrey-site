@@ -1,8 +1,19 @@
-const $ = require('jquery');
+import $ from 'jquery';
+import 'slick-carousel'
 
-class OverlayHandler {
+export default class OverlayHandler {
   constructor() {
     this.setupListeners();
+
+    $('.js-slide-show').slick({
+      centerMode: true,
+      infinite: false,
+      variableWidth: true,
+      slidesToShow: 2,
+      prevArrow: '.js-slick-left',
+      nextArrow: '.js-slick-right',
+      slide: '.js-slide'
+    });
   }
 
   setupListeners() {
@@ -12,6 +23,7 @@ class OverlayHandler {
   }
 
   handleOverlayClose(e) {
+    e.preventDefault();
     const overlay = $(e.target).closest('.js-overlay')[0];
 
     if (overlay) {
@@ -37,17 +49,18 @@ class OverlayHandler {
     }
   }
 
-  showOverlay($overlay) {
-    $overlay.addClass('-is-visible'); 
+  showOverlay(overlay) {
+    overlay.classList.add('-is-visible'); 
   }
 
   hideOverlaysExcept($overlay) {
     $('#overlays .js-overlay').not($overlay).removeClass('-is-visible');
   }
 
-  hideOverlay($overlay) {
-    $overlay.removeClass('-is-visible');
+  hideOverlay(overlay) {
+    overlay.classList.remove('-is-visible');
   }
 }
 
 window.Overlay = new OverlayHandler();
+
