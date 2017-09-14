@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20170910195206) do
 
-  create_table "admins", force: :cascade do |t|
+  create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -31,37 +31,37 @@ ActiveRecord::Schema.define(version: 20170910195206) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
-  create_table "images", force: :cascade do |t|
+  create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.string "file_file_name"
     t.string "file_content_type"
     t.integer "file_file_size"
     t.datetime "file_updated_at"
     t.string "imageable_type"
-    t.integer "imageable_id"
+    t.bigint "imageable_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id"
   end
 
-  create_table "pages", force: :cascade do |t|
+  create_table "pages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "permalink"
     t.string "name"
     t.string "title"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.decimal "position"
+    t.integer "position"
   end
 
-  create_table "projects", force: :cascade do |t|
+  create_table "projects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "permalink"
     t.string "title"
     t.text "description"
     t.integer "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "page_id"
+    t.bigint "page_id"
     t.index ["page_id"], name: "index_projects_on_page_id"
     t.index ["permalink"], name: "index_projects_on_permalink", unique: true
   end
