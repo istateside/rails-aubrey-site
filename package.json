@@ -12,7 +12,7 @@
   "license": "MIT",
   "engines": {
     "node": ">= 0.10",
-    "yarn": ">= 1.0.2"
+    "yarn": "0.27.5"
   },
   "devDependencies": {
     "webpack-dev-server": "^2.7.1"
