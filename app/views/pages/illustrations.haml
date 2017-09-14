@@ -1,2 +1,73 @@
 %section.illustrations
-  
+  %h2 Illustrations
+  %ul.work-grid
+    %li.project.js-overlay-trigger{ data: { overlay_index: 1 } }
+      .overlay
+        %p The Rumpus - Goldhawk
+      = image_tag 'aubrey-assets/illustration/Illustration__TheRumpus_Goldhawk1.jpg'
+
+    %li.project.js-overlay-trigger{ data: { overlay_index: 2 } }
+      .overlay
+        %p Greenpointers
+      = image_tag 'aubrey-assets/illustration/Illustration_Greenpointers1.jpg'
+
+    %li.project.js-overlay-trigger{ data: { overlay_index: 3 } }
+      .overlay
+        %p The Rumpus - Mother
+      = image_tag 'aubrey-assets/illustration/Rumpus_Mother1.jpg'
+
+    %li.project.js-overlay-trigger{ data: { overlay_index: 4 } }
+      .overlay
+        %p Personal work
+      = image_tag 'aubrey-assets/illustration/Illustration_Personal.jpg'
+
+#overlays
+  = render 'projects/overlay', idx: 1 do
+    .slide.js-slide.text.wide
+      .title-card
+        %h2 The Rumpus - Goldhawk
+    .slide.js-slide
+      = image_tag 'aubrey-assets/illustration/Illustration__TheRumpus_Goldhawk1.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/illustration/Illustration__TheRumpus_Goldhawk2.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/illustration/Illustration__TheRumpus_Goldhawk3.jpg'
+
+  = render 'projects/overlay', idx: 2 do
+    .slide.js-slide.text.wide
+      .title-card
+        %h2 Greenpointers
+    .slide.js-slide
+      = image_tag 'aubrey-assets/illustration/Illustration_Greenpointers1.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/illustration/Illustration_Greenpointers2.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/illustration/Illustration_Greenpointers3.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/illustration/Illustration_Greenpointers4.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/illustration/Illustration_Greenpointers5.jpg'
+
+  = render 'projects/overlay', idx: 3 do
+    .slide.js-slide.text.wide
+      .title-card
+        %h2 The Rumpus - Mother
+    .slide.js-slide
+      = image_tag 'aubrey-assets/illustration/Rumpus_Mother1.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/illustration/Rumpus_Mother2.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/illustration/Rumpus_Mother3.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/illustration/Rumpus_Mother4.jpg'
+
+  = render 'projects/overlay', idx: 4 do
+    .slide.js-slide.text.wide
+      .title-card
+        %h2 Personal Work
+    .slide.js-slide
+      = image_tag 'aubrey-assets/illustration/Illustration_Personal.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/illustration/Illustration_Personal2.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/illustration/Illustration_Personal3.jpg'

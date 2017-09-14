@@ -5,6 +5,40 @@ export default class OverlayHandler {
   constructor() {
     this.setupListeners();
 
+    //this.resizeSlides();
+
+    this.setupSlideshow();
+  }
+
+  setupListeners() {
+    $('.js-overlay-close').on('click', this.handleOverlayClose.bind(this));
+    $('.js-overlay-trigger').on('click', this.handleOverlayTrigger.bind(this));
+    $(document).on('keydown', this.handleKeypress.bind(this));
+  }
+
+  resizeSlides() {
+    $('.js-slide').each((idx, element) => {
+      const img = $(element).find('img')[0];
+
+      if (img) {
+        if (img.complete) {
+          this.resizeImage(img);
+        } else {
+          $(img).on('load', this.resizeImage);
+        }
+      }
+    });
+  }
+
+  resizeImage(img) {
+    if (img.clientHeight > img.clientWidth) {
+      img.parentElement.setAttribute('style', 'max-height: 80%; width: auto;max-width:none;'); 
+    } else {
+      img.parentElement.setAttribute('style', 'max-width: 80%; height: auto; max-height:none;');
+    }
+  }
+
+  setupSlideshow() {
     $('.js-slide-show').slick({
       centerMode: true,
       infinite: false,
@@ -15,12 +49,6 @@ export default class OverlayHandler {
       nextArrow: '.js-slick-right',
       slide: '.js-slide'
     });
-  }
-
-  setupListeners() {
-    $('.js-overlay-close').on('click', this.handleOverlayClose.bind(this));
-    $('.js-overlay-trigger').on('click', this.handleOverlayTrigger.bind(this));
-    $(document).on('keydown', this.handleKeypress.bind(this));
   }
 
   handleOverlayClose(e) {

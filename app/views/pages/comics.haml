@@ -1,2 +1,115 @@
 %section.comics
-  
+  %h2 Comics
+  %ul.work-grid
+    %li.project.js-overlay-trigger{ data: { overlay_index: 1 } }
+      .overlay
+        %p Canis
+      = image_tag 'aubrey-assets/comics/Comics_Canis1.jpg'
+
+    %li.project.js-overlay-trigger{ data: { overlay_index: 2 } }
+      .overlay
+        %p Greenpointers
+      = image_tag 'aubrey-assets/comics/Comics_Greenpointers_1.jpg'
+
+    %li.project.js-overlay-trigger{ data: { overlay_index: 3 } }
+      .overlay
+        %p Heather
+      = image_tag 'aubrey-assets/comics/Comics_Heather1.jpg'
+
+    %li.project.js-overlay-trigger{ data: { overlay_index: 4 } }
+      .overlay
+        %p Meeting Place
+      = image_tag 'aubrey-assets/comics/Comics_MeetingPlace_1.jpg'
+
+    %li.project.js-overlay-trigger{ data: { overlay_index: 5 } }
+      .overlay
+        %p Productivity
+      = image_tag 'aubrey-assets/comics/Comics_Productivity1.jpg'
+
+#overlays
+  = render 'projects/overlay', idx: 1 do
+    .slide.js-slide.text.wide
+      .title-card
+        %h2 Canis
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Canis1.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Canis2.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Canis3.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Canis4.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Canis5.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Canis6.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Canis7.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Canis8.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Canis9.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Canis10.jpg'
+
+  = render 'projects/overlay', idx: 2 do
+    .slide.js-slide.text.wide
+      .title-card
+        %h2 Greenpointers
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Greenpointers_1.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Greenpointers_2.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Greenpointers_3.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Greenpointers_4.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Greenpointers_5.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Greenpointers_6.jpg'
+
+  = render 'projects/overlay', idx: 3 do
+    .slide.js-slide.text.wide
+      .title-card
+        %h2 Heather
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Heather1.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Heather2.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Heather3.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Heather4.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Heather5.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Heather6.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Heather7.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Heather8.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Heather9.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Heather10.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Heather11.jpg'
+
+  = render 'projects/overlay', idx: 4 do
+    .slide.js-slide.text.wide
+      .title-card
+        %h2 Meeting Place
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_MeetingPlace_1.jpg'
+
+  = render 'projects/overlay', idx: 5 do
+    .slide.js-slide.text.wide
+      .title-card
+        %h2 Productivity
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Productivity1.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Productivity2.jpg'
+    .slide.js-slide
+      = image_tag 'aubrey-assets/comics/Comics_Productivity3.jpg'

@@ -7,11 +7,18 @@
 }
 
 .grid {
-  columns: 2;
-  column-gap: 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .project {
+    width: 30%;
+  }
 }
 
 .project {
+  position: relative;
   margin-bottom: 3rem;
   display: inline-block;
   max-width: 40%;
