@@ -19,6 +19,7 @@ gem 'acts_as_list'
 gem 'rack-cors'
 gem 'simple_token_authentication', '~> 1.5' # see semver.org
 
+gem 'active_model_serializers'
 gem 'webpacker', '~> 3.0'
 
 group :development, :test do
