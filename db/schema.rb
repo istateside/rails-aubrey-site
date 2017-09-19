@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 20170910195206) do
 
-  create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -31,7 +34,7 @@ ActiveRecord::Schema.define(version: 20170910195206) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
-  create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "images", force: :cascade do |t|
     t.string "name"
     t.string "file_file_name"
     t.string "file_content_type"
@@ -44,7 +47,7 @@ ActiveRecord::Schema.define(version: 20170910195206) do
     t.index ["imageable_type", "imageable_id"], name: "index_images_on_imageable_type_and_imageable_id"
   end
 
-  create_table "pages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "pages", force: :cascade do |t|
     t.string "permalink"
     t.string "name"
     t.string "title"
@@ -54,7 +57,7 @@ ActiveRecord::Schema.define(version: 20170910195206) do
     t.integer "position"
   end
 
-  create_table "projects", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "projects", force: :cascade do |t|
     t.string "permalink"
     t.string "title"
     t.text "description"
