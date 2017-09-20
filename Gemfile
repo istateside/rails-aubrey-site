@@ -12,7 +12,7 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'bcrypt', '~> 3.1.7'
-gem 'devise', :github => "plataformatec/devise", :branch => "master"
+gem 'devise'
 gem 'haml-rails', '~> 0.9'
 gem 'paperclip', '~> 5.0.0'
 gem 'acts_as_list'
