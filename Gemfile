@@ -37,4 +37,4 @@ group :development do
   gem 'awesome_print'
 end
 
-ruby "2.4.1"
+ruby "2.3.4"
